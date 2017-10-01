@@ -60,8 +60,6 @@ RUN sed -i -f /opt/app-root/etc/httpdconf.sed /opt/rh/httpd24/root/etc/httpd/con
     chmod -R a+rwx /opt/rh/httpd24/root/var/run/httpd && \
     chmod -R a+rwx /usr/libexec/s2i/assemble
     
-RUN yum install php-pear 
-    
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
     
