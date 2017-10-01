@@ -29,7 +29,6 @@ LABEL summary="$SUMMARY" \
       release="1" \
       maintainer="SoftwareCollections.org <sclorg@redhat.com>"
 
-RUN echo "10";
 
 # Install Apache httpd and PHP
 #rh-php56-php-pecl-mongo
