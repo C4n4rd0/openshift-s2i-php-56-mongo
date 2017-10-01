@@ -31,6 +31,7 @@ LABEL summary="$SUMMARY" \
 # Install Apache httpd and PHP
 # We need to call 2 (!) yum commands before being able to enable repositories properly
 # This is a workaround for https://bugzilla.redhat.com/show_bug.cgi?id=1479388
+#rh-php56-php-pecl-mongo
 RUN yum repolist > /dev/null && \
     yum install -y yum-utils && \
     yum-config-manager --disable \* &> /dev/null && \
@@ -66,8 +67,6 @@ RUN sed -i -f /opt/app-root/etc/httpdconf.sed /opt/rh/httpd24/root/etc/httpd/con
     chmod -R a+rwx /opt/rh/httpd24/root/var/run/httpd && \
     chmod -R a+rwx /usr/libexec/s2i/assemble
     
-RUN yum install php-pear 
-   
 RUN pecl install mongodb \
     && docker-php-ext-enable mongodb
 
