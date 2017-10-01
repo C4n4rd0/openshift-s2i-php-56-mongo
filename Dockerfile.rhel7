@@ -28,7 +28,6 @@ LABEL summary="$SUMMARY" \
       version="5.6" \
       release="3"
  
- RUN echo "20";
 
 # Install Apache httpd and PHP
 # We need to call 2 (!) yum commands before being able to enable repositories properly
