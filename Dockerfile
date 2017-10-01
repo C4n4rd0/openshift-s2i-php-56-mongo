@@ -65,8 +65,6 @@ RUN sed -i -f /opt/app-root/etc/httpdconf.sed /opt/rh/httpd24/root/etc/httpd/con
 #RUN pecl install mongodb \
 #    && docker-php-ext-enable mongodb
 RUN pecl install mongodb
-
-RUN echo $PHPRC
     
 USER 1001
 
