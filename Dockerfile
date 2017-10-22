@@ -61,6 +61,7 @@ RUN sed -i -f /opt/app-root/etc/httpdconf.sed /opt/rh/httpd24/root/etc/httpd/con
     chmod -R a+rwx /etc/opt/rh/rh-php56 && \
     chmod -R a+rwx /opt/rh/httpd24/root/var/run/httpd && \
     chmod -R a+rwx /usr/libexec/s2i/assemble
+    chmod -R a+rwx $STI_SCRIPTS_PATH/usage
     
 #RUN pecl install mongodb \
 #    && docker-php-ext-enable mongodb
@@ -71,4 +72,4 @@ RUN echo "extension=mongodb.so" | tee /etc/opt/rh/rh-php56/php.ini
 USER 1001
 
 # Set the default CMD to print the usage of the language image
-CMD $STI_SCRIPTS_PATH/usagee
+CMD $STI_SCRIPTS_PATH/usage
