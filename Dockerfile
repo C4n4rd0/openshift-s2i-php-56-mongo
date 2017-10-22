@@ -68,7 +68,7 @@ RUN pecl install mongodb
 
 RUN echo "extension=mongodb.so" | tee /etc/opt/rh/rh-php56/php.ini
     
-USER 1001
+#USER 1001
 
 # Set the default CMD to print the usage of the language image
 CMD $STI_SCRIPTS_PATH/usage
