@@ -60,7 +60,7 @@ RUN sed -i -f /opt/app-root/etc/httpdconf.sed /opt/rh/httpd24/root/etc/httpd/con
     chmod -R ug+rwx /opt/app-root && \
     chmod -R a+rwx /etc/opt/rh/rh-php56 && \
     chmod -R a+rwx /opt/rh/httpd24/root/var/run/httpd && \
-    chmod -R a+rwx /usr/libexec/s2i/assemble
+    chmod -R a+rwx /usr/libexec/s2i/assemble && \
     chmod -R a+rwx $STI_SCRIPTS_PATH/usage
     
 #RUN pecl install mongodb \
